@@ -1,0 +1,31 @@
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=5em, text centered, rounded corners,  node distance=3cm and 1cm, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
+    minimum height=2em]
+    
+\begin{tikzpicture}[node distance = 1cm, auto]
+    % Place nodes
+    \node [block] (cInter) {Provider Interface};
+    \node [block, left of=cInter] (pInter) {Client Interface};
+    \node [block, right of=cInter] (game1) {First TransGame};
+    \node [block, below of=game1] (game1Study) {Effectivness Study at CUMC};
+    \node [block, left of=game1Study] (beta) {Build Network of providers};
+    \node [block, left of=beta] (pBack) {Interface Implementations};
+    \node [block, below of=beta] (game1StudyRW) {Deployed Beta};
+ 
+ 	%Dates
+    \node [right =1em of game1] (stage1) {Stage 1 $\mid$ Jan 1 - Apr 1};
+    \node [right =1em of game1Study] (stage2) {Stage 2 $\mid$ Apr 1 - Jun 1};
+    \node [right =10em of game1StudyRW] (stage3) {Stage 3 $\mid$ Jun 1 - \ldots};
+    % Draw edges
+    \path [line] (game1) edge (game1Study);
+	\path [line] (pInter) edge (pBack);
+	\path [line] (cInter) edge (pBack);
+    \path [line] (cInter) edge (beta);
+    \path [line] (pBack) edge (game1StudyRW);
+    \path [<->] (cInter) edge (pInter);
+	\path [<->] (game1Study) edge (beta);
+    \path [line] (beta) edge (game1StudyRW);
+
+\end{tikzpicture}

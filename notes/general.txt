@@ -1,0 +1,16 @@
+# Some Unstructured Notes
+
+# CBT (Cognitive behavioral therapy)
+
+Framework for therapy, and already has some basis for electronic / remote delivery (https://en.wikipedia.org/wiki/Cognitive_behavioral_therapy#Computerized_or_internet-delivered). 
+
+Meeting from YEI with Rick Hunt
+ - Focus on emotional message
+ - can this be applied outside a clinical context? maybe mention chocolate-covered broccoli
+ - Highlight the technical capabilities of the team. no extra people needed (at least for V1)
+
+Meeting from IHY with Cass Walker
+ - See a prototype
+ - Testing with real people
+ - Great to be personally invested
+ - go to more events at yale
